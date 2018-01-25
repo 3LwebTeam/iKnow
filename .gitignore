@@ -1,0 +1,16 @@
+./src/iKnow/.architect
+./src/iKnow/bootstrap.css
+./src/iKnow/bootstrap.css
+./src/iKnow/bootstrap.js
+./src/iKnow/bootstrap.json
+./src/iKnow/bootstrap.jsonp
+./src/iKnow/build/
+./src/iKnow/classic.json
+./src/iKnow/classic.jsonp
+./src/iKnow/ext/
+./src/iKnow/modern.json
+./src/iKnow/modern.jsonp
+./src/iKnow/resources/sass/.sass-cache/
+./src/iKnow/resources/.arch-internal-preview.css
+./src/iKnow/.arch-internal-preview.css
+.sencha
