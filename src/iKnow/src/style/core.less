@@ -2,6 +2,7 @@
  * Core: General Layout Style
  * -------------------------
  */
+
 html,
 body {
   height: 100%;
@@ -17,7 +18,9 @@ body {
   overflow-y: auto;
 }
 
+
 /* Layout */
+
 .wrapper {
   .clearfix();
   height: 100%;
@@ -37,9 +40,11 @@ body {
   background: url('@{boxed-layout-bg-image-path}') repeat fixed;
 }
 
+
 /*
  * Content Wrapper - contains the main content
  */
+
 .content-wrapper,
 .main-footer {
   // Using disposable variable to join statements with a comma
@@ -47,21 +52,18 @@ body {
   margin @transition-speed @transition-fn;
   .transition-transform(@transition-rule);
   margin-left: @sidebar-width;
-  z-index: 820;
-  // Top nav layout
+  z-index: 820; // Top nav layout
   .layout-top-nav & {
     margin-left: 0;
   }
   @media (max-width: @screen-xs-max) {
     margin-left: 0;
-  }
-  // When opening the sidebar on large screens
+  } // When opening the sidebar on large screens
   .sidebar-collapse & {
     @media (min-width: @screen-sm) {
       margin-left: 0;
     }
-  }
-  // When opening the sidebar on small screens
+  } // When opening the sidebar on small screens
   .sidebar-open & {
     @media (max-width: @screen-xs-max) {
       .translate(@sidebar-width, 0);
@@ -69,7 +71,9 @@ body {
   }
 }
 
-.content-wrapper  {
+.content-wrapper {
+  margin-top:50px;
+  overflow: hidden;
   min-height: 100%;
   background-color: @body-bg;
   z-index: 800;
@@ -82,7 +86,9 @@ body {
   border-top: 1px solid @gray-lte;
 }
 
+
 /* Fixed layout */
+
 .fixed {
   .main-header,
   .main-sidebar,
@@ -125,14 +131,18 @@ body {
   }
 }
 
+
 /* Content */
+
 .content {
   min-height: 250px;
   padding: 15px;
   .container-fixed(@grid-gutter-width);
 }
 
+
 /* H1 - H6 font */
+
 h1,
 h2,
 h3,
@@ -148,7 +158,9 @@ h6,
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 /* General Links */
+
 a {
   color: @link-color;
 }
@@ -161,12 +173,14 @@ a:focus {
   color: @link-hover-color;
 }
 
+
 /* Page Header */
+
 .page-header {
   margin: 10px 0 20px 0;
   font-size: 22px;
 
-  > small {
+  >small {
     color: #666;
     display: block;
     margin-top: 5px;
