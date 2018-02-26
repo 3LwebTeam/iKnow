@@ -243,9 +243,10 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <!-- <div class="content-wrapper"> -->
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <router-view></router-view>
+    <!-- <section class="content-header">
       <h1>
         Page Header
         <small>Optional description</small>
@@ -254,18 +255,18 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-    </section>
+    </section> -->
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <!-- <section class="content container-fluid"> -->
 
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
 
-    </section>
+    <!-- </section>  -->
     <!-- /.content -->
-  </div>
+  <!-- </div> -->
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
@@ -356,13 +357,3 @@
   <div class="control-sidebar-bg"></div>
 </div>
 </template>
-<script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
-</script>
