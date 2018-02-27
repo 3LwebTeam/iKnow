@@ -2,7 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 import router from './router'
+import auth from './auth/auth'
 import './lib/jquery-vender.js'
 import 'bootstrap'
 import 'admin-lte'
@@ -11,7 +14,12 @@ import 'font-awesome/css/font-awesome.css'
 import 'admin-lte/dist/css/AdminLTE.min.css'
 import 'admin-lte/dist/css/skins/_all-skins.min.css'
 
+Vue.use(VueRouter)
+Vue.use(VueResource)
 Vue.config.productionTip = false
+
+// 在启动APP时进行校验是否有token
+auth.checkAuth()
 
 /* eslint-disable no-new */
 new Vue({

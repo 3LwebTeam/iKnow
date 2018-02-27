@@ -1,17 +1,16 @@
 <template>
   <div class="login-box">
     <div class="login-logo">
-      <a href="../../index2.html"><b>Admin</b>LTE</a>
+      <a href="#"><b>Admin</b>LTE</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-      <form action="../../index2.html" method="post">
         <div class="form-group has-feedback">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" placeholder="Email" v-model="info.username">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" v-model="info.password">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
@@ -24,11 +23,10 @@
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat" @click="submit()">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
-      </form>
       <div class="social-auth-links text-center">
         <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
         Facebook</a>
@@ -44,3 +42,29 @@
   </div>
   <!-- /.login-box -->
 </template>
+
+<script>
+import auth from '../auth/auth'
+
+export default {
+
+  data () {
+    return {
+      info: {
+        username: '',
+        password: ''
+      },
+      error: ''
+    }
+  },
+  methods: {
+    submit () {
+      var info = {
+        username: this.info.username,
+        password: this.info.password
+      }
+      auth.login(this, info)
+    }
+  }
+}
+</script>
