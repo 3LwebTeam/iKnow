@@ -3,6 +3,7 @@ import Login from '@/components/Login'
 import register from '@/components/register'
 import lockscreen from '@/components/lockscreen'
 import iNotes from '@/components/iNotes'
+import iNotesContent from '@/components/iNotesContent'
 
 export default [{
   path: '/lockscreen',
@@ -22,8 +23,12 @@ export default [{
   component: layout,
   redirect: '/iNotes',
   children: [{
-    path: 'iNotes',
+    path: '/iNotes',
     name: 'iNotes',
     component: iNotes
+  }, {
+    path: '/iNotes/:id',
+    name: 'iNotesContent',
+    component: iNotesContent
   }]
 }]
