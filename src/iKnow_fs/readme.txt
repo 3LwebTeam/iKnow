@@ -9,3 +9,8 @@
     qContent : String,   //题目的内容
     AnsContent: String,   //答案的内容
     notes: String,        //添加笔记
+
+
+https://blog.aspose.cloud/2014/10/13/use-aspose-for-cloud-node.js-sdk-to-work-with-sections-paragraphs-runs-page-setup-and-fonts-in-word-documents/
+
+在nodejs中调用Aspose for Cloud SDK for NodeJS接口，来将doc文件转化为html格式
