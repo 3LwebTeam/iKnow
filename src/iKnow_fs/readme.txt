@@ -14,3 +14,7 @@
 https://blog.aspose.cloud/2014/10/13/use-aspose-for-cloud-node.js-sdk-to-work-with-sections-paragraphs-runs-page-setup-and-fonts-in-word-documents/
 
 在nodejs中调用Aspose for Cloud SDK for NodeJS接口，来将doc文件转化为html格式
+
+
+https://www.jianshu.com/p/503895d3ffc9
+[译]Webpack前端构建集成方案
