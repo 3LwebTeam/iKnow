@@ -1,5 +1,7 @@
 module.exports = function(grunt){
 	var cheerio = require('cheerio');
+	var html = require('./html-withimg-loader.js');
+
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -10,16 +12,6 @@ module.exports = function(grunt){
 				tasks: ['copyright']
 			}
 		},
-		// copy: {
-		// 	html: {
-		// 		src: 'index.html',
-		// 		dest: 'dist/index.html'
-		// 	},
-		// 	doc: {
-		// 		src: '*.docx',
-		// 		dest: 'dist/'
-		// 	}
-		// },
 		pkg: grunt.file.read('index.htm')
 	});
 
@@ -27,6 +19,8 @@ module.exports = function(grunt){
 	grunt.registerTask('copyright', function(pkg){
 		var pkg = grunt.config.get('pkg');
 
-		grunt.log.writeln(pkg);
+		grunt.log.writeln(html(pkg));
 	});
 }
+
+
